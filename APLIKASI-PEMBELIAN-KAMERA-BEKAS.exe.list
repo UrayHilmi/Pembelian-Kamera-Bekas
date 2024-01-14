@@ -1,0 +1,322 @@
+EMU8086 GENERATED LISTING. MACHINE CODE <- SOURCE.
+ 
+APLIKASI-PEMBELIAN-KAMERA-BEKAS.exe -- emu8086 assembler version: 4.00-Beta-17  
+ 
+[ 1/14/2024  --  5:36:47 PM ] 
+ 
+===================================================================================================
+[LINE]     LOC: MACHINE CODE                          SOURCE
+===================================================================================================
+ 
+[   1]        :                                       .model small
+[   2]        :                                       .data
+[   3]        :                                       ; Menu barang
+[   4]    0000: 0D 0A 2F 2F 3D 3D 3D 3D 3D 3D 3D 3D   menu_msg db 13,10, '//==================================================\\'
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 5C 5C             
+[   5]    0038: 0D 0A 7C 7C 20 20 20 20 20 20 20 20   db 13,10, '||               SELAMAT DATANG DI                  ||'
+                20 20 20 20 20 20 20 53 45 4C 41 4D 
+                41 54 20 44 41 54 41 4E 47 20 44 49 
+                20 20 20 20 20 20 20 20 20 20 20 20 
+                20 20 20 20 20 20 7C 7C             
+[   6]    0070: 0D 0A 7C 7C 20 20 20 20 20 20 20 20   db 13,10, '||               TOKO KAMERA BEKAS                  ||'
+                20 20 20 20 20 20 20 54 4F 4B 4F 20 
+                4B 41 4D 45 52 41 20 42 45 4B 41 53 
+                20 20 20 20 20 20 20 20 20 20 20 20 
+                20 20 20 20 20 20 7C 7C             
+[   7]    00A8: 0D 0A 7C 7C 3D 3D 3D 3D 3D 3D 3D 3D   db 13,10, '||==================================================||'
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 7C 7C             
+[   8]    00E0: 0D 0A 7C 7C 20 20 20 20 20 20 20 4A   db 13,10, '||       JENIS KAMERA          |     HARGA   | STOK ||'
+                45 4E 49 53 20 4B 41 4D 45 52 41 20 
+                20 20 20 20 20 20 20 20 20 7C 20 20 
+                20 20 20 48 41 52 47 41 20 20 20 7C 
+                20 53 54 4F 4B 20 7C 7C             
+[   9]    0118: 0D 0A 7C 7C 3D 3D 3D 3D 3D 3D 3D 3D   db 13,10, '||==================================================||'
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 7C 7C             
+[  10]    0150: 0D 0A 5B 31 5D 20 43 61 6E 6F 6E 20   db 13,10, '[1] Canon EOS M50 Mark II      | Rp8.000.000 | READY||'
+                45 4F 53 20 4D 35 30 20 4D 61 72 6B 
+                20 49 49 20 20 20 20 20 20 7C 20 52 
+                70 38 2E 30 30 30 2E 30 30 30 20 7C 
+                20 52 45 41 44 59 7C 7C             
+[  11]    0188: 0D 0A 5B 32 5D 20 53 6F 6E 79 20 41   db 13,10, '[2] Sony Alpha 6000            | Rp5.000.000 | READY||'
+                6C 70 68 61 20 36 30 30 30 20 20 20 
+                20 20 20 20 20 20 20 20 20 7C 20 52 
+                70 35 2E 30 30 30 2E 30 30 30 20 7C 
+                20 52 45 41 44 59 7C 7C             
+[  12]    01C0: 0D 0A 5B 33 5D 20 41 63 74 69 6F 6E   db 13,10, '[3] Action Cam Gopro Hero 11   | Rp4.000.000 | READY||'
+                20 43 61 6D 20 47 6F 70 72 6F 20 48 
+                65 72 6F 20 31 31 20 20 20 7C 20 52 
+                70 34 2E 30 30 30 2E 30 30 30 20 7C 
+                20 52 45 41 44 59 7C 7C             
+[  13]    01F8: 0D 0A 5B 34 5D 20 41 63 74 69 6F 6E   db 13,10, '[4] Action Cam Insta360 Go 3   | Rp4.500.000 | READY||'
+                20 43 61 6D 20 49 6E 73 74 61 33 36 
+                30 20 47 6F 20 33 20 20 20 7C 20 52 
+                70 34 2E 35 30 30 2E 30 30 30 20 7C 
+                20 52 45 41 44 59 7C 7C             
+[  14]    0230: 0D 0A 5B 35 5D 20 46 75 6A 69 66 69   db 13,10, '[5] Fujifilm XT-200            | Rp9.000.000 |  X   ||'
+                6C 6D 20 58 54 2D 32 30 30 20 20 20 
+                20 20 20 20 20 20 20 20 20 7C 20 52 
+                70 39 2E 30 30 30 2E 30 30 30 20 7C 
+                20 20 58 20 20 20 7C 7C             
+[  15]    0268: 0D 0A 5B 36 5D 20 46 75 6A 69 66 69   db 13,10, '[6] Fujifilm XT-100            | Rp7.500.000 |  X   ||'
+                6C 6D 20 58 54 2D 31 30 30 20 20 20 
+                20 20 20 20 20 20 20 20 20 7C 20 52 
+                70 37 2E 35 30 30 2E 30 30 30 20 7C 
+                20 20 58 20 20 20 7C 7C             
+[  16]    02A0: 0D 0A 5B 37 5D 20 43 61 6E 6F 6E 20   db 13,10, '[7] Canon EOS M200             | Rp3.500.000 |  X   ||'
+                45 4F 53 20 4D 32 30 30 20 20 20 20 
+                20 20 20 20 20 20 20 20 20 7C 20 52 
+                70 33 2E 35 30 30 2E 30 30 30 20 7C 
+                20 20 58 20 20 20 7C 7C             
+[  17]    02D8: 0D 0A 5C 5C 3D 3D 3D 3D 3D 3D 3D 3D   db 13,10, '\\==================================================//','$'
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+                3D 3D 3D 3D 3D 3D 2F 2F 24          
+[  18]        :                                       
+[  19]        :                                       ; Pesan total harga
+[  20]    0311: 0D 0A 20 00                           total_msg db 13,10,' ', 0
+[  21]        :                                       
+[  22]        :                                       ; Variabel untuk menyimpan pilihan pengguna
+[  23]    0315: 0D 0A 50 69 6C 69 68 20 6A 65 6E 69   selected_camera_msg db 13,10,'Pilih jenis Kamera Yang Tersedia (1-7): $', 0
+                73 20 4B 61 6D 65 72 61 20 59 61 6E 
+                67 20 54 65 72 73 65 64 69 61 20 28 
+                31 2D 37 29 3A 20 24 00             
+[  24]    0341: 00                                    user_choice db 0
+[  25]        :                                       
+[  26]        :                                       ; Variabel harga kamera
+[  27]    0342: 40 1F                                 canon_price dw 8000
+[  28]    0344: 88 13                                 sony_price dw 5000
+[  29]    0346: A0 0F                                 gopro_price dw 4000
+[  30]    0348: 94 11                                 insta360_price dw 4500
+[  31]        :                                       
+[  32]        :                                       ; Pesan untuk setiap pilihan kamera
+[  33]    034A: 0D 0A 41 6E 64 61 20 6D 65 6D 69 6C   msg_part1_canon db 13,10,'Anda memilih Canon EOS M50 Mark II. Harga: Rp8.000.000', 13,10, '$', 0
+                69 68 20 43 61 6E 6F 6E 20 45 4F 53 
+                20 4D 35 30 20 4D 61 72 6B 20 49 49 
+                2E 20 48 61 72 67 61 3A 20 52 70 38 
+                2E 30 30 30 2E 30 30 30 0D 0A 24 00 
+                                                    
+[  34]        :                                       
+[  35]    0386: 0D 0A 41 6E 64 61 20 6D 65 6D 69 6C   msg_part1_sony db 13,10,'Anda memilih Sony Alpha 6000. Harga: Rp5.000.000', 13,10, '$', 0
+                69 68 20 53 6F 6E 79 20 41 6C 70 68 
+                61 20 36 30 30 30 2E 20 48 61 72 67 
+                61 3A 20 52 70 35 2E 30 30 30 2E 30 
+                30 30 0D 0A 24 00                   
+[  36]        :                                       
+[  37]    03BC: 0D 0A 41 6E 64 61 20 6D 65 6D 69 6C   msg_part1_gopro db 13,10,'Anda memilih Action Cam Gopro Hero 11. Harga: Rp4.000.000', 13,10, '$', 0
+                69 68 20 41 63 74 69 6F 6E 20 43 61 
+                6D 20 47 6F 70 72 6F 20 48 65 72 6F 
+                20 31 31 2E 20 48 61 72 67 61 3A 20 
+                52 70 34 2E 30 30 30 2E 30 30 30 0D 
+                0A 24 00                            
+[  38]        :                                       
+[  39]    03FB: 0D 0A 41 6E 64 61 20 6D 65 6D 69 6C   msg_part1_insta360 db 13,10,'Anda memilih Action Cam Insta360 Go 3. Harga: Rp4.500.000', 13,10, '$', 0
+                69 68 20 41 63 74 69 6F 6E 20 43 61 
+                6D 20 49 6E 73 74 61 33 36 30 20 47 
+                6F 20 33 2E 20 48 61 72 67 61 3A 20 
+                52 70 34 2E 35 30 30 2E 30 30 30 0D 
+                0A 24 00                            
+[  40]        :                                       
+[  41]        :                                       ; Pesan untuk konfirmasi pembayaran
+[  42]    043A: 0D 0A 4D 65 74 6F 64 65 20 50 65 6D   payment_msg db 13,10,'Metode Pembayaran Yang Tersedia Saat Ini:'
+                62 61 79 61 72 61 6E 20 59 61 6E 67 
+                20 54 65 72 73 65 64 69 61 20 53 61 
+                61 74 20 49 6E 69 3A                
+[  43]    0465: 0D 0A 31 2E 20 43 4F 44               db 13,10,'1. COD'
+[  44]    046D: 0D 0A 32 2E 20 4B 65 6C 75 61 72      db 13,10,'2. Keluar'
+[  45]    0478: 0D 0A 50 69 6C 69 68 3A 20 24 00      db 13,10,'Pilih : $', 0
+[  46]    0483: 0D 0A 50 69 6C 69 68 61 6E 20 74 69   invalid_choice_msg db 13,10,'Pilihan tidak tersedia. Silahkan coba lagi.', 13,10, '$', 0
+                64 61 6B 20 74 65 72 73 65 64 69 61 
+                2E 20 53 69 6C 61 68 6B 61 6E 20 63 
+                6F 62 61 20 6C 61 67 69 2E 0D 0A 24 
+                00                                  
+[  47]        :                                       
+[  48]        :                                       ; Variabel untuk menyimpan nama dan alamat pengguna
+[  49]        :                                       
+[  50]    04B4: 0D 0A 4D 61 73 75 6B 6B 61 6E 20 6E   name_msg db 13,10,'Masukkan nama Anda: $', 0
+                61 6D 61 20 41 6E 64 61 3A 20 24 00 
+                                                    
+[  51]    04CC: 0D 0A 4D 61 73 75 6B 6B 61 6E 20 61   address_msg db 13,10,'Masukkan alamat Anda: $', 0
+                6C 61 6D 61 74 20 41 6E 64 61 3A 20 
+                24 00                               
+[  52]        :                                       
+[  53]        :                                       name db 20 dup('$')
+[  54]    04E6: 24 24 24 24 24 24 24 24 24 24 24 24   address db 50 dup('$')
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24 24 24 24 24 24 24 24 24 24 24 
+                24 24                               
+[  55]        :                                       
+[  56]        :                                       ; Konfirmasi pembelian dan pengiriman
+[  57]    0518: 0D 0A 50 65 6D 62 61 79 61 72 61 6E   confirmation_msg db 13,10,'Pembayaran berhasil! Paket anda segera kami proses'
+                20 62 65 72 68 61 73 69 6C 21 20 50 
+                61 6B 65 74 20 61 6E 64 61 20 73 65 
+                67 65 72 61 20 6B 61 6D 69 20 70 72 
+                6F 73 65 73                         
+[  58]    054C: 0D 0A 64 61 6E 20 61 6B 61 6E 20 64   db 13,10,'dan akan dikirim ke alamat tujuan. Terima kasih!', 13,10, '$', 0
+                69 6B 69 72 69 6D 20 6B 65 20 61 6C 
+                61 6D 61 74 20 74 75 6A 75 61 6E 2E 
+                20 54 65 72 69 6D 61 20 6B 61 73 69 
+                68 21 0D 0A 24 00                   
+[  59]        :                                       
+[  60]        :                                       .code
+[  61]    0590:                                       main proc
+[  62]    0590: B8 00 00                              mov ax, @data
+[  63]    0593: 8E D8                                 mov ds, ax
+[  64]        :                                       
+[  65]        :                                       ; Menu barang
+[  66]    0595: B4 09                                 mov ah, 9
+[  67]    0597: BA 00 00                              lea dx, menu_msg
+[  68]    059A: CD 21                                 int 21h
+[  69]        :                                       
+[  70]        :                                       ; Loop untuk memilih barang
+[  71]    059C:                                       choose_loop:
+[  72]        :                                       ; Prompt untuk memilih kamera
+[  73]    059C: B4 09                                 mov ah, 9
+[  74]    059E: BA 11 03                              lea dx, total_msg
+[  75]    05A1: CD 21                                 int 21h
+[  76]        :                                       
+[  77]        :                                       ; Membaca input dari pengguna
+[  78]    05A3: B4 01                                 mov ah, 1
+[  79]    05A5: CD 21                                 int 21h
+[  80]    05A7: 2C 30                                 sub al, '0'  ; Konversi ASCII ke bilangan
+[  81]    05A9: A2 41 03                              mov user_choice, al   ; Simpan pilihan pengguna
+[  82]        :                                       
+[  83]        :                                       ; Menangani pilihan pengguna
+[  84]    05AC: 80 3E 41 03 01                        cmp user_choice, 1
+[  85]    05B1: 74 17                                 je Canon
+[  86]    05B3: 80 3E 41 03 02                        cmp user_choice, 2
+[  87]    05B8: 74 1D                                 je Sony
+[  88]    05BA: 80 3E 41 03 03                        cmp user_choice, 3
+[  89]    05BF: 74 23                                 je Gopro
+[  90]    05C1: 80 3E 41 03 04                        cmp user_choice, 4
+[  91]    05C6: 74 29                                 je Insta360
+[  92]    05C8: EB 34                                 jmp InvalidChoice
+[  93]        :                                       
+[  94]    05CA:                                       Canon:
+[  95]        :                                       ; Pilihan Canon Eos M50 Mark II
+[  96]    05CA: B4 09                                 mov ah, 9
+[  97]    05CC: BA 4A 03                              lea dx, msg_part1_canon
+[  98]    05CF: CD 21                                 int 21h
+[  99]        :                                       
+[ 100]    05D1: 03 06 42 03                           add ax, canon_price
+[ 101]    05D5: EB 30                                 jmp PaymentPrompt
+[ 102]        :                                       
+[ 103]    05D7:                                       Sony:
+[ 104]        :                                       ; Pilihan Sony Alpha 6000
+[ 105]    05D7: B4 09                                 mov ah, 9
+[ 106]    05D9: BA 86 03                              lea dx, msg_part1_sony
+[ 107]    05DC: CD 21                                 int 21h
+[ 108]        :                                       
+[ 109]    05DE: 03 06 44 03                           add ax, sony_price
+[ 110]    05E2: EB 23                                 jmp PaymentPrompt
+[ 111]        :                                       
+[ 112]    05E4:                                       Gopro:
+[ 113]        :                                       ; Pilihan Action Cam Gopro Hero 11
+[ 114]    05E4: B4 09                                 mov ah, 9
+[ 115]    05E6: BA BC 03                              lea dx, msg_part1_gopro
+[ 116]    05E9: CD 21                                 int 21h
+[ 117]        :                                       
+[ 118]    05EB: 03 06 46 03                           add ax, gopro_price
+[ 119]    05EF: EB 16                                 jmp PaymentPrompt
+[ 120]        :                                       
+[ 121]    05F1:                                       Insta360:
+[ 122]        :                                       ; Pilihan Action Cam Insta360 Go 3
+[ 123]    05F1: B4 09                                 mov ah, 9
+[ 124]    05F3: BA FB 03                              lea dx, msg_part1_insta360
+[ 125]    05F6: CD 21                                 int 21h
+[ 126]        :                                       
+[ 127]    05F8: 03 06 48 03                           add ax, insta360_price
+[ 128]    05FC: EB 09                                 jmp PaymentPrompt
+[ 129]        :                                       
+[ 130]    05FE:                                       InvalidChoice:
+[ 131]        :                                       ; Menangani pilihan yang tidak valid
+[ 132]    05FE: B4 09                                 mov ah, 9
+[ 133]    0600: BA 83 04                              lea dx, invalid_choice_msg
+[ 134]    0603: CD 21                                 int 21h
+[ 135]    0605: EB 95                                 jmp choose_loop
+[ 136]        :                                       
+[ 137]    0607:                                       PaymentPrompt:
+[ 138]        :                                       ; Menampilkan pesan konfirmasi pembayaran
+[ 139]    0607: B4 09                                 mov ah, 9
+[ 140]    0609: BA 3A 04                              lea dx, payment_msg
+[ 141]    060C: CD 21                                 int 21h
+[ 142]        :                                       
+[ 143]        :                                       ; Membaca metode pembayaran
+[ 144]    060E: B4 01                                 mov ah, 1
+[ 145]    0610: CD 21                                 int 21h
+[ 146]    0612: 2C 30                                 sub al, '0'
+[ 147]        :                                       
+[ 148]    0614: 3C 01                                 cmp al, 1
+[ 149]    0616: 74 02                                 je CashOnDelivery
+[ 150]    0618: EB 1D                                 jmp Exit
+[ 151]        :                                       
+[ 152]    061A:                                       CashOnDelivery:
+[ 153]        :                                       ; Meminta nama dari pengguna
+[ 154]    061A: B4 09                                 mov ah, 9
+[ 155]    061C: BA B4 04                              lea dx, name_msg
+[ 156]    061F: CD 21                                 int 21h
+[ 157]        :                                       
+[ 158]        :                                       ; Membaca nama
+[ 159]    0621: E8 17 00                              call read_string
+[ 160]        :                                       
+[ 161]        :                                       ; Meminta alamat dari pengguna
+[ 162]    0624: B4 09                                 mov ah, 9
+[ 163]    0626: BA CC 04                              lea dx, address_msg
+[ 164]    0629: CD 21                                 int 21h
+[ 165]        :                                       
+[ 166]        :                                       ; Membaca alamat
+[ 167]    062B: E8 0D 00                              call read_string
+[ 168]        :                                       
+[ 169]        :                                       ; Menampilkan pesan konfirmasi
+[ 170]    062E: B4 09                                 mov ah, 9
+[ 171]    0630: BA 18 05                              lea dx, confirmation_msg
+[ 172]    0633: CD 21                                 int 21h
+[ 173]        :                                       
+[ 174]    0635: EB 00                                 jmp Exit
+[ 175]        :                                       
+[ 176]        :                                       
+[ 177]    0637:                                       Exit:
+[ 178]        :                                       ; Akhir program
+[ 179]    0637: B4 4C                                 mov ah, 4Ch
+[ 180]    0639: CD 21                                 int 21h
+[ 181]        :                                       
+[ 182]        :                                       main endp
+[ 183]        :                                       
+[ 184]    063B:                                       read_string proc
+[ 185]    063B: BE 00 00                              mov si, 0
+[ 186]        :                                       
+[ 187]    063E:                                       read_string_loop:
+[ 188]    063E: B4 01                                 mov ah, 1
+[ 189]    0640: CD 21                                 int 21h
+[ 190]        :                                       
+[ 191]    0642: 3C 0D                                 cmp al, 13  ; Cek apakah Enter ditekan
+[ 192]    0644: 74 0A                                 je read_string_done
+[ 193]        :                                       
+[ 194]    0646: 83 FE 13                              cmp si, 19  ; Check if the maximum length is reached
+[ 195]    0649: 74 05                                 je read_string_done
+[ 196]        :                                       
+[ 197]    064B: 88 04                                 mov [si], al
+[ 198]    064D: 46                                    inc si
+[ 199]        :                                       
+[ 200]    064E: EB EE                                 jmp read_string_loop
+[ 201]        :                                       
+[ 202]    0650:                                       read_string_done:
+[ 203]    0650: C6 04 24                              mov [si], '$'  ; Menambahkan akhir string
+[ 204]    0653: C3                                    ret
+[ 205]        :                                       read_string endp
+[ 206]        :                                       
+[ 207]        :                                       end main
+[ 208]        :                                       
+ 
+===================================================================================================
+ 

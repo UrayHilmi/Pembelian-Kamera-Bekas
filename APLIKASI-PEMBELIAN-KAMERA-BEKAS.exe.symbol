@@ -1,0 +1,41 @@
+< THE SYMBOL TABLE >  APLIKASI-PEMBELIAN-KAMERA-BEKAS.exe  --  emu8086 assembler version: 4.00-Beta-17 
+===================================================================================================
+Name                     	Offset    	Size      	Type      	Segment   
+===================================================================================================
+DATA                     	00000     	-5        	SEGMENT   	(ITSELF)  
+MENU_MSG                 	00000     	1         	VAR       	data      
+TOTAL_MSG                	00311     	1         	VAR       	data      
+SELECTED_CAMERA_MSG      	00315     	1         	VAR       	data      
+USER_CHOICE              	00341     	1         	VAR       	data      
+CANON_PRICE              	00342     	2         	VAR       	data      
+SONY_PRICE               	00344     	2         	VAR       	data      
+GOPRO_PRICE              	00346     	2         	VAR       	data      
+INSTA360_PRICE           	00348     	2         	VAR       	data      
+MSG_PART1_CANON          	0034A     	1         	VAR       	data      
+MSG_PART1_SONY           	00386     	1         	VAR       	data      
+MSG_PART1_GOPRO          	003BC     	1         	VAR       	data      
+MSG_PART1_INSTA360       	003FB     	1         	VAR       	data      
+PAYMENT_MSG              	0043A     	1         	VAR       	data      
+INVALID_CHOICE_MSG       	00483     	1         	VAR       	data      
+NAME_MSG                 	004B4     	1         	VAR       	data      
+ADDRESS_MSG              	004CC     	1         	VAR       	data      
+ADDRESS                  	004E6     	1         	VAR       	data      
+CONFIRMATION_MSG         	00518     	1         	VAR       	data      
+CODE                     	00059     	-5        	SEGMENT   	(ITSELF)  
+MAIN                     	00000     	-1        	NEAR      	code      
+CHOOSE_LOOP              	0000C     	-1        	LABEL     	code      
+CANON                    	0003A     	-1        	LABEL     	code      
+SONY                     	00047     	-1        	LABEL     	code      
+GOPRO                    	00054     	-1        	LABEL     	code      
+INSTA360                 	00061     	-1        	LABEL     	code      
+INVALIDCHOICE            	0006E     	-1        	LABEL     	code      
+PAYMENTPROMPT            	00077     	-1        	LABEL     	code      
+CASHONDELIVERY           	0008A     	-1        	LABEL     	code      
+EXIT                     	000A7     	-1        	LABEL     	code      
+READ_STRING              	000AB     	-1        	NEAR      	code      
+READ_STRING_LOOP         	000AE     	-1        	LABEL     	code      
+READ_STRING_DONE         	000C0     	-1        	LABEL     	code      
+===================================================================================================
+[ 1/14/2024  --  5:36:47 PM ] 
+< END >
+ 
